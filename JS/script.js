@@ -15,6 +15,18 @@
 
 // <!-- Aggiungo numerazione progressiva da 1 a 100 sulla griglia 10X10caselle-->
 
+let numbers = [];
+for(let i = 1; i < 100 + 1; i++){ 
+    console.log([i]);
+    thisNumber = [i];
+    const row = document.querySelector(".row");
+    const thisSquare = document.createElement ("div")
+    thisSquare.classList.add("col")
+    thisSquare.innerHTML = thisNumber;
+    console.log(thisSquare);
+    row.append(thisSquare);
+}
 
 // <!-- Creo evento bottone con display block sulla griglia di HTML -->
+
 // <!-- Aggiungo evento su ciascuna cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata. -->
