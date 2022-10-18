@@ -9,11 +9,11 @@
     background-color: rgb(83, 179, 235);
 }
 
-.row.d_block{
+.d_block{
     display: block;
 }
-.container.d_hidden{
-    display: hidden;
+.d_hidden{
+    display: none !important;
 }
 
 /* CONTAINER */
@@ -30,8 +30,8 @@
 
 .col{
     border: 1px solid purple;
-    width: 70px;
-    min-height: 70px;
+    /* width: 70px;
+    min-height: 70px; */
     margin: 0;
     display: flex;
     justify-content: center;
@@ -39,8 +39,8 @@
 }
 
 .row{
-    width: 750px;
-    max-height: 750px;
+    width: 500px;
+    height: 500px;
     border: 1px, solid blue;
     display: flex;
     flex-wrap: wrap;

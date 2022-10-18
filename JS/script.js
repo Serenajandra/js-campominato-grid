@@ -13,38 +13,47 @@
 // <!-- ESECUZIONE -->
 // <!-- Griglia: -->
 
-// <!-- Aggiungo numerazione progressiva da 1 a 100 sulla griglia 10X10caselle-->
-let thisSquare = "";
+// <!-- Aggiungo numerazione progressiva da 1 a 100 sulla griglia 10X10caselle e creo la griglia in cui inwerirli-->
+
 let numbers = [];
-for(let i = 1; i < 100 + 1; i++){ 
-    console.log([i]);
-    thisNumber = [i];
-    const row = document.querySelector(".row");
-     thisSquare = document.createElement ("div");
-    thisSquare.classList.add("col");
-    thisSquare.innerHTML = thisNumber;
-    console.log(thisSquare);
-    row.append(thisSquare);
-    // row.classList.add("d_hidden");
+let thisNumber = "";
+
+// <!-- Creo evento sul bottone per visualizzare griglia di gioco (inserisco display block) -->
+
+const startBtn = document.querySelector(".genera_btn");
+
+startBtn.addEventListener("click", function(){
+ generateGrid (thisNumber); 
+
+})
+
+// FUNCTION
+function generateGrid(thisNumber) {
+
+    for(let i = 1; i < 100 + 1; i++){ 
+        console.log([i]);
+        thisNumber = [i];
+        row = document.querySelector(".row");
+        square = document.createElement("div");
+        square.style.width = `calc(100% / 10)`;
+        square.style.height = `calc(100% / 10)`;
+        square.classList.add("col");
+        square.innerHTML = (`${thisNumber}`);
+        row.append(square);
+        console.log(square)
+    }
+return square;
 }
+
 
 // const gridContainer = document.querySelector(".container");
 // gridContainer.classList.add("d_hidden");
 
-// <!-- Creo evento bottone con display block sulla griglia di HTML -->
-
-const startBtn = document.querySelector(".generabtn");
-const generaBtnContainer = document.querySelector(".btn_container");
-
-startBtn.addEventListener("click", function(){
-generaBtnContainer.classList.add("")    
-
-})
 
 // <!-- Aggiungo evento su ciascuna cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata. -->
-thisSquare.addEventListener("click", handleSquareClick);
-row.append(thisSquare);
-console.log("thisSquare");
+// thisSquare.addEventListener("click", handleSquareClick);
+// row.append(thisSquare);
+// console.log("thisSquare");
 
 // function handleSquareClick();
 // thisSquare.classList.add("bg_blue");
