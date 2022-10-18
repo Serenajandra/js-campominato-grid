@@ -13,23 +13,40 @@
 // <!-- ESECUZIONE -->
 // <!-- Griglia: -->
 
-// <!-- Aggiungo numerazione progressiva da 1 a 100 sulla griglia 10X10caselle e creo la griglia in cui inwerirli-->
+
 
 let numbers = [];
 let thisNumber = "";
 
 // <!-- Creo evento sul bottone per visualizzare griglia di gioco (inserisco display block) -->
-
 const startBtn = document.querySelector(".genera_btn");
-
 startBtn.addEventListener("click", function(){
  generateGrid (thisNumber); 
-
+ square.addEventListener("click", handleSquareClick);
 })
 
-// FUNCTION
-function generateGrid(thisNumber) {
+// <!-- Aggiungo evento su ciascuna cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata. -->
 
+
+// const squareOutOfFunction = generateGrid (thisNumber); 
+
+
+
+ 
+
+function handleSquareClick(){
+    this.classList.add("bg_blue")
+};
+
+
+
+
+
+
+
+// FUNCTIONS
+// <!-- Aggiungo numerazione progressiva da 1 a 100 sulla griglia 10X10caselle e creo la griglia in cui inwerirli-->
+function generateGrid(thisNumber) {
     for(let i = 1; i < 100 + 1; i++){ 
         console.log([i]);
         thisNumber = [i];
@@ -44,16 +61,3 @@ function generateGrid(thisNumber) {
     }
 return square;
 }
-
-
-// const gridContainer = document.querySelector(".container");
-// gridContainer.classList.add("d_hidden");
-
-
-// <!-- Aggiungo evento su ciascuna cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata. -->
-// thisSquare.addEventListener("click", handleSquareClick);
-// row.append(thisSquare);
-// console.log("thisSquare");
-
-// function handleSquareClick();
-// thisSquare.classList.add("bg_blue");
