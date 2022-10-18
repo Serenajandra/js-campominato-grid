@@ -20,9 +20,10 @@ let thisNumber = "";
 
 // <!-- Creo evento sul bottone per visualizzare griglia di gioco (inserisco display block) -->
 const startBtn = document.querySelector(".genera_btn");
+
 startBtn.addEventListener("click", function(){
  generateGrid (thisNumber); 
- square.addEventListener("click", handleSquareClick);
+ 
 })
 
 // <!-- Aggiungo evento su ciascuna cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata. -->
@@ -30,16 +31,13 @@ startBtn.addEventListener("click", function(){
 
 // const squareOutOfFunction = generateGrid (thisNumber); 
 
+const newSquare = generateGrid (thisNumber);
 
-
- 
+newSquare.addEventListener("click", handleSquareClick);
 
 function handleSquareClick(){
     this.classList.add("bg_blue")
 };
-
-
-
 
 
 
